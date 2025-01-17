@@ -56,3 +56,32 @@ document.querySelectorAll('.accordion-header').forEach(button => {
       }
     });
   });
+
+  $(document).ready(function () {
+    $('.slider').slick({
+      dots: true, // Enables navigation dots
+      infinite: true, // Loop through slides infinitely
+      speed: 800, // Transition speed
+      slidesToShow: 3, // Number of slides visible at once
+      slidesToScroll: 1, // Number of slides to scroll at once
+      autoplay: true, // Autoplay the slides
+      autoplaySpeed: 3000, // Speed of autoplay
+      arrows: true, // Enables next/prev arrows
+      responsive: [
+        {
+          breakpoint: 1024, // Adjust for tablet devices
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 768, // Adjust for mobile devices
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  });
